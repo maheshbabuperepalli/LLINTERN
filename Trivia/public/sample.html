@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(/public/bbq.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;            
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #3498db;
+            color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .navbar h1 {
+            margin: 0;
+            text-shadow: 2px 2px 2px black;
+        }
+        .logout-button {
+            background-color: #fff;
+            color: #3498db;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex: 1; 
+        }
+        .student,
+        .teacher,
+        .stud_Score {
+            background-color: rgba(255, 255, 255, 0.865);
+            border: 2px solid #3498db;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            width: 35%;
+            height: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            margin-top: 60px;
+            
+        }
+        .student:hover,
+        .teacher:hover,
+        .stud_Score:hover {
+            transform: scale(1.05);
+            background-color: rgba(255, 255, 255, 0.591);
+        }
+        .quiz-button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out;
+            margin-top: 10px;
+        }
+        .quiz-button:hover {
+            border-radius: 100px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            color: #333;
+            font-size:49px;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: black;
+        }
+        .contact-info {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1>Trivia</h1>
+        <button class="logout-button">Logout &#x02190;</button>
+    </div>
+    <div class="container">
+        <div class="student">
+            <div class="content">
+                <button class="quiz-button"><a href="/user_quizzes">Quiz History</a></button>
+            </div>
+        </div>
+        <div class="teacher">
+            <div class="content">
+                <button class="quiz-button"><a href="/create_quiz">Create a Quiz</a></button>
+            </div>
+        </div>
+        <div class="stud_Score">
+            <div class="content">
+                <button class="quiz-button"><a href="/display_stud">Quiz Taken By</a></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2023 Team Trivia
+    </div>
+
+    <div class="contact-info">
+        Contact us at: teamtrivia@gmail.com
+    </div>
+</body>
+</html>

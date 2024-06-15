@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url("/public/start_quizbg.jpg");
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            background-color: white;
+            border-radius: 10px;
+            text-align: center;
+            width: 105%;
+            height: 400px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .access-quiz {
+            
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            margin-top: 125px;
+        }
+
+        .access-quiz-heading {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .access-quiz-form {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-label {
+            font-size: 18px;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-input {
+            width: 80%;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .access-quiz-button {
+            background-color: #3c6b9e;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .access-quiz-button:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+    <title>Access Quiz</title>
+    </head>
+    <body>
+        <section class="access-quiz">
+            <div class="container"><br>
+            <h1 class="access-quiz-heading" style="font-weight: 1000; font-size: 40px;">Access Quiz</h1><br><br>
+            <form id="accessQuizForm" class="access-quiz-form" action="/start_quiz" method="get">
+                <div class="form-group">
+                    <label for="studentId" class="form-label">Enter Student ID:</label><br>
+                    <input type="text" id="studentId" name="studentId" class="form-input" required>
+                </div>
+                <div class="form-group"><br>
+                    <label for="quizId" class="form-label">Enter Quiz ID:</label>
+                    <input type="text" id="quizId" name="refId" class="form-input" required>
+                </div>
+                <div class="form-group"><br>
+                    <button type="submit" class="access-quiz-button">Access Quiz</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
